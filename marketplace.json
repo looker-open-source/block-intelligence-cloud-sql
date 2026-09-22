@@ -1,0 +1,42 @@
+{
+  "label": "Fleet Operational Intelligence for Google Cloud SQL",
+  "category_label": "Models",
+  "branding": {
+    "image_uri": "https://static-a.cdn.looker.app/marketplace/block-icons/block-cloudsql-icon.png",
+    "tagline": "Real-time and 14-day historical database observability, buffer cache hit ratios, connection concurrency, and query diagnostics for Google Cloud SQL (MySQL & PostgreSQL)."
+  },
+  "constants": {
+    "MYSQL_CONNECTION_NAME": {
+      "label": "Cloud SQL MySQL Connection Name",
+      "value_constraint": "connection",
+      "description": "The Looker database connection name configured for your Cloud SQL for MySQL instance (leave default or empty if only deploying PostgreSQL)."
+    },
+    "POSTGRES_CONNECTION_NAME": {
+      "label": "Cloud SQL PostgreSQL Connection Name",
+      "value_constraint": "connection",
+      "description": "The Looker database connection name configured for your Cloud SQL for PostgreSQL instance (leave default or empty if only deploying MySQL)."
+    },
+    "POSTGRES_EXTENSION_SCHEMA": {
+      "label": "PostgreSQL Extension Schema Name",
+      "description": "The schema where pg_stat_statements is installed in your PostgreSQL instance (default: public)."
+    },
+    "SQL_ENGINE_TYPE": {
+      "label": "Primary SQL Engine Type",
+      "description": "Default database engine filter for unified dashboards ('mysql' or 'postgresql')."
+    }
+  },
+  "models": [
+    {
+      "name": "operational_intelligence_cloud_sql",
+      "connection_constant": "MYSQL_CONNECTION_NAME"
+    },
+    {
+      "name": "mysql_observability",
+      "connection_constant": "MYSQL_CONNECTION_NAME"
+    },
+    {
+      "name": "postgres_observability",
+      "connection_constant": "POSTGRES_CONNECTION_NAME"
+    }
+  ]
+}

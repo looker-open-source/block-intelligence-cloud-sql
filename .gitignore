@@ -1,0 +1,34 @@
+# Python & Virtual Environments
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+
+# Jupyter Notebooks & Checkpoints
+.ipynb_checkpoints/
+cloud_sql_workload_simulation.ipynb
+
+# Local Workload Scripts & Architecture Docs
+simulate_workload.py
+list_files.py
+WORKLOAD_GENERATOR_ARCHITECTURE.md
+audit_report_looker_mysql_production_*.md
+gemini-conversation-*.json
+looker_audit.skill
+
+# AI Assistant Configurations
+.gemini/
+GEMINI.md
+
+# OS & Editor Metadata
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
